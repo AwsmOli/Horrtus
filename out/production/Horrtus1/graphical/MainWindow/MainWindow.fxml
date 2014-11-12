@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox minWidth="600.0" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphical.MainWindow.MainController">
+   <children>
+  <MenuBar fx:id="menuBar" prefWidth="941.9999000000025" AnchorPane.bottomAnchor="1055.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS" VBox.vgrow="NEVER">
+    <menus>
+      <Menu mnemonicParsing="false" text="Datei">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Schließen" />
+        </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Bearbeiten">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Delete" />
+        </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Hilfe">
+        <items>
+          <MenuItem mnemonicParsing="false" text="About" />
+        </items>
+      </Menu>
+    </menus>
+  </MenuBar>
+    <SplitPane id="SplitPane" dividerPositions="0.15276329509906153, 0.6225234619395204" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane id="Content" minHeight="-1.0" minWidth="300.0" prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <VBox id="VBox" alignment="CENTER" prefHeight="682.0" prefWidth="326.0" spacing="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <ToolBar>
+                  <items>
+                    <Label text="Navigation" />
+                              <Button fx:id="addCustomerButton" mnemonicParsing="false" onAction="#newBill" text="Button" />
+                  </items>
+                </ToolBar>
+                <TreeView fx:id="navigation" minWidth="300.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+                  <VBox.margin>
+                    <Insets />
+                  </VBox.margin>
+                </TreeView>
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+        <AnchorPane id="Content" minWidth="300.0" prefHeight="1054.0" prefWidth="785.0" style="-fx-background-color: white;&#10;-fx-border-color: grey;">
+          <children>
+            <HBox id="HBox" alignment="TOP_LEFT" prefWidth="334.0" spacing="2.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+              <children>
+                <Label ellipsisString="" text="Kunde:                 " />
+                <VBox id="VBox" alignment="CENTER" spacing="1.0" HBox.hgrow="ALWAYS">
+                  <children>
+                              <HBox>
+                                 <children>
+                          <TextField fx:id="customerTitle" prefHeight="25.0" prefWidth="83.0" promptText="Anrede" />
+                                    <TextField fx:id="costumerName" promptText="Vorname" HBox.hgrow="ALWAYS" />
+                                    <TextField fx:id="customerLastName" promptText="Nachname" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                    <TextField fx:id="costumerAddress" prefWidth="200.0" promptText="Adresse" />
+                              <HBox>
+                                 <children>
+                          <TextField fx:id="customerZipCode" prefHeight="25.0" prefWidth="81.0" promptText="Postleitzahl" />
+                                    <TextField fx:id="costumerCity" promptText="Stadt" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER_LEFT" spacing="2.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="110.0">
+              <children>
+                <Label ellipsisString="" text="Rechungsdatum: " />
+                <VBox id="VBox" alignment="CENTER" spacing="1.0" HBox.hgrow="ALWAYS">
+                  <children>
+                    <TextField fx:id="billDate" promptText="dd.mm.yyyy" />
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER_LEFT" layoutY="145.0" spacing="2.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+              <children>
+                <Label ellipsisString="" text="Überschrift:         " />
+                <VBox id="VBox" alignment="CENTER" spacing="1.0" HBox.hgrow="ALWAYS">
+                  <children>
+                    <TextField fx:id="title" />
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="TOP_LEFT" layoutX="18.0" layoutY="590.0" prefHeight="78.0" prefWidth="521.0" spacing="2.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0">
+              <children>
+                <Label ellipsisString="" text="Text: " />
+              <TextArea fx:id="billText" prefHeight="78.0" prefWidth="341.0" wrapText="true" />
+                        <VBox alignment="TOP_RIGHT" prefHeight="78.0" prefWidth="145.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="17.0" prefWidth="49.0" text="Preis:" textAlignment="RIGHT" />
+                                    <Label fx:id="lblPrice" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="96.0" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="17.0" prefWidth="49.0" text="Ust.:" textAlignment="RIGHT" />
+                                    <Label fx:id="lblUst" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="96.0" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="17.0" prefWidth="49.0" text="Gesamt:" textAlignment="RIGHT" />
+                                    <Label fx:id="lblTotal" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="96.0" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label contentDisplay="TOP" prefHeight="17.0" prefWidth="94.0" text="Zeitaufwand:" textAlignment="RIGHT" />
+                                    <Label fx:id="lblTime" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="96.0" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+              </children>
+            </HBox>
+                  <TreeTableView fx:id="positionTreeTableView" layoutX="14.0" layoutY="186.0" prefHeight="394.0" prefWidth="387.0" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="185.0" />
+          </children>
+          <padding>
+            <Insets />
+          </padding>
+        </AnchorPane>
+        <AnchorPane id="Content" minHeight="-1.0" minWidth="300.0" prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <VBox id="VBox" alignment="CENTER" prefHeight="682.0" prefWidth="326.0" spacing="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                        <AnchorPane minWidth="300.0" VBox.vgrow="NEVER">
+                           <children>
+                    <Label layoutX="9.0" layoutY="5.0" prefHeight="18.0" prefWidth="669.0" text="Leistungsverzeichnis" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="4.0" HBox.hgrow="NEVER" />
+                              <Button layoutX="108.0" mnemonicParsing="false" onAction="#newProduct" style="-fx-background-color: white;" textFill="#7ac600" textOverrun="CLIP" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0" HBox.hgrow="NEVER">
+                                 <font>
+                                    <Font name="System Bold" size="9.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fx:id="addProductButton" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../res/add.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <TreeTableView fx:id="productTreeTableView" prefHeight="394.0" prefWidth="387.0" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TreeTableColumn prefWidth="75.0" text="C1" />
+                              <TreeTableColumn prefWidth="75.0" text="C2" />
+                           </columns>
+                        </TreeTableView>
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+      <AnchorPane prefHeight="75.0" prefWidth="445.0" style="-fx-background-color: #00a3ff;" VBox.vgrow="NEVER">
+         <children>
+            <HBox layoutX="1242.0" layoutY="6.0" spacing="6.0" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#newCategory" prefHeight="22.0" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Neue Kategorie" textFill="#00a3ff">
+                     <stylesheets>
+                        <URL value="@../../res/styles.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#makePDF" prefHeight="22.0" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Drucken..." textFill="#00a3ff">
+                     <stylesheets>
+                        <URL value="@../../res/styles.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#newProject" prefHeight="22.0" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Neues Project" textFill="#00a3ff">
+                     <stylesheets>
+                        <URL value="@../../res/styles.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button layoutX="1868.0" mnemonicParsing="false" onAction="#newCustomer" prefHeight="22.0" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Neuer Kunde" textFill="#00a3ff" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+                     <stylesheets>
+                        <URL value="@../../res/styles.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#newPossition" prefHeight="22.0" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Neue Position" textFill="#00a3ff">
+                     <stylesheets>
+                        <URL value="@../../res/styles.css" />
+                     </stylesheets>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="ErrLabel" layoutX="14.0" layoutY="10.0" prefHeight="17.0" prefWidth="785.0" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

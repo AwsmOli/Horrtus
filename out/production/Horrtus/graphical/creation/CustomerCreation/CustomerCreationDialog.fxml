@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane disable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#processKeyboard" prefHeight="395.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphical.creation.CustomerCreation.CustomerCreationController">
+  <children>
+    <VBox id="VBox" alignment="CENTER" prefHeight="302.0000999999975" prefWidth="426.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <HBox prefHeight="237.0" prefWidth="398.0" VBox.vgrow="ALWAYS">
+          <children>
+            <VBox padding="$x1" prefHeight="200.0" prefWidth="100.0" spacing="3.0" HBox.hgrow="ALWAYS" HBox.margin="$x1">
+              <children>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0" VBox.vgrow="NEVER">
+                  <children>
+                    <Label maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Titel:" />
+                    <TextField fx:id="tfTitle" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                  <VBox.margin>
+                    <Insets fx:id="x1" />
+                  </VBox.margin>
+                </HBox>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <Label maxWidth="60.0" minWidth="60.0" prefHeight="-1.0" prefWidth="60.0" text="Vorname:" />
+                    <TextField fx:id="tfFirstName" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <Label maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Nachname:" />
+                    <TextField fx:id="tfLastName" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <Label maxWidth="60.0" minHeight="-1.0" minWidth="60.0" prefHeight="-1.0" prefWidth="60.0" text="Firma:" />
+                    <TextField fx:id="tfCompany" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <Label maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Adresse:" />
+                    <TextField fx:id="tfAddress1" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <Label maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="" />
+                    <TextField fx:id="tfAddress2" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <Label maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="PLZ, Ort" />
+                    <TextField fx:id="tfZipCode" prefWidth="60.0" HBox.hgrow="NEVER" />
+                    <TextField fx:id="tfCity" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <Label maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="E-Mail:" />
+                    <TextField fx:id="tfEmail" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <Label maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Fax:" />
+                    <TextField fx:id="tfFax" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+                <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+                  <children>
+                    <Label maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Telefon:" />
+                    <TextField fx:id="tfPhone" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+          <VBox.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+          </VBox.margin>
+        </HBox>
+        <AnchorPane minHeight="-Infinity" prefHeight="42.0" prefWidth="426.0" style="-fx-background-color: #00a3ff;" VBox.vgrow="NEVER">
+          <children>
+            <HBox id="HBox" alignment="CENTER" prefWidth="405.9999000000025" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <Label fx:id="lError" minHeight="-1.0" minWidth="-1.0" prefWidth="271.0" textFill="WHITE" visible="true" HBox.hgrow="ALWAYS" />
+                <Button fx:id="bCancel" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#close" style="-fx-background-color: white;&#10;-fx-background-radius: 1;&#10;&#10;" text="Abbrechen" HBox.hgrow="NEVER">
+                  <textFill>
+                    <Color blue="1.000" green="0.640" red="0.000" fx:id="x2" />
+                  </textFill>
+                </Button>
+                <Button fx:id="bSubmit" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submitButtonAction" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Speichern" textFill="$x2" HBox.hgrow="NEVER" />
+              </children>
+            </HBox>
+          </children>
+        </AnchorPane>
+      </children>
+    </VBox>
+    <Label fx:id="headline" layoutX="10.0" layoutY="35.0" prefWidth="236.0" text="Neuer Kunde:" textFill="$x2" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <font>
+        <Font name="Calibri" size="42.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

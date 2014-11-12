@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane onKeyReleased="#processKeyboard" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphical.creation.PossitionCreation.PossitionCreationController">
+  <children>
+    <AnchorPane layoutX="0.0" layoutY="308.0" minHeight="-Infinity" prefHeight="42.0" prefWidth="450.0" style="-fx-background-color: #00a3ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <HBox id="HBox" alignment="CENTER" prefWidth="405.9999000000025" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <Label fx:id="lError" minHeight="-1.0" minWidth="-1.0" prefWidth="271.0" text="" textFill="WHITE" visible="true" HBox.hgrow="ALWAYS" />
+            <Button fx:id="bCancel" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#close" style="-fx-background-color: white;&#10;-fx-background-radius: 1;&#10;&#10;" text="Abbrechen" HBox.hgrow="NEVER">
+              <textFill>
+                <Color blue="1.000" green="0.640" red="0.000" fx:id="x1" />
+              </textFill>
+            </Button>
+            <Button fx:id="bSubmit" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#submitButtonAction" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Speichern" textFill="$x1" HBox.hgrow="NEVER" />
+          </children>
+        </HBox>
+      </children>
+    </AnchorPane>
+    <Label fx:id="headline" layoutX="14.0" layoutY="14.0" prefWidth="431.0" text="Neue Possition" textFill="#00a3ff">
+      <font>
+        <Font name="Calibri" size="42.0" />
+      </font>
+    </Label>
+    <TreeView fx:id="tProduct" layoutX="14.0" layoutY="81.0" prefHeight="219.0" prefWidth="200.0" />
+    <TextField fx:id="tfAmount" layoutX="285.0" layoutY="82.0" prefWidth="42.0" text="1" />
+    <TextField fx:id="tfPrice" layoutX="358.0" layoutY="83.0" prefWidth="78.0" />
+    <Label layoutX="14.0" layoutY="65.0" text="Produkt" />
+    <Label layoutX="285.0" layoutY="66.0" text="Mänge" />
+    <Label layoutX="358.0" layoutY="68.0" prefWidth="78.0" text="Gesamt Preis" />
+    <TextField fx:id="tfPricePerUnit" layoutX="225.0" layoutY="82.0" prefWidth="57.0" />
+    <Label layoutX="225.0" layoutY="66.0" prefWidth="57.0" text="Preis/Stk" />
+    <Label fx:id="lUnit" layoutX="327.0" layoutY="84.0" text="m²" />
+    <Label layoutX="225.0" layoutY="105.0" prefHeight="195.0" prefWidth="212.0" textAlignment="LEFT" textOverrun="ELLIPSIS" wrapText="true" />
+  </children>
+</AnchorPane>

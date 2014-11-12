@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root prefHeight="431.0" prefWidth="608.0" type="javafx.scene.layout.AnchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="graphical.ServiceRegister.ServiceRegisterController">
+    <children>
+      <TreeTableView prefHeight="389.0" prefWidth="608.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TreeTableColumn prefWidth="75.0" text="Produkt" />
+          <TreeTableColumn prefWidth="75.0" text="Einheit" />
+            <TreeTableColumn prefWidth="84.0" text="Preis/Stk" />
+            <TreeTableColumn prefWidth="75.0" text="Preis/X" />
+        </columns>
+      </TreeTableView>
+      <AnchorPane layoutY="386.0" prefHeight="42.0" prefWidth="445.0" style="-fx-background-color: #00a3ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="closeButton" layoutX="355.0" layoutY="9.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="22.0" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Okay" textFill="#00a3ff" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0">
+               <stylesheets>
+                  <URL value="@../../res/styles.css" />
+               </stylesheets>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</fx:root>

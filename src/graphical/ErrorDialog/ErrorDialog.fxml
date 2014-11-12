@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#processKeyboard" prefHeight="350.0" prefWidth="450.0" styleClass="main-back" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphical.ErrorDialog.ErrorDialogController">
+  <children>
+    <Label layoutX="14.0" layoutY="14.0" text="Oh..." textFill="#0083cc">
+      <font>
+        <Font name="Calibri" size="47.0" />
+      </font>
+      <stylesheets>
+        <URL value="@../../res/styles.css" />
+      </stylesheets>
+    </Label>
+    <Label layoutX="14.0" layoutY="56.0" text="Ein Fehler ist aufgetreten:" />
+    <TextArea fx:id="supportInfoTextArea" disable="false" editable="false" layoutX="14.0" layoutY="161.0" prefHeight="137.0" prefWidth="417.0" promptText="Fehlermeldung + Stacktrace" style="  -fx-text-fill: #000000;&#10;  -fx-prompt-text-fill: #000000;&#10;  -fx-opacity: 1.0;&#10;  -fx-background-color: white; &#10;}.scroll-bar .thumb {&#10;    -fx-background-color:derive(black,90%);&#10;    -fx-background-insets: 0, 0, 0;&#10;    -fx-background-radius: 0em;&#10;}" styleClass="scroll-bar" text="" wrapText="false">
+      <stylesheets>
+        <URL value="@../../res/Scrollbar.css" />
+      </stylesheets>
+    </TextArea>
+    <Label layoutX="14.0" layoutY="140.0" text="Geben sie folgende Info ihrem Entwickler, er wird wissen was zu tun ist!" />
+    <TextArea id="errMsg" fx:id="errMsgTextArea" disable="false" editable="false" layoutX="14.0" layoutY="72.0" prefHeight="51.0" prefWidth="417.0" promptText="Fehlermeldung" style="  -fx-text-fill: #000000;&#10;  -fx-prompt-text-fill: #000000;&#10;  -fx-opacity: 1.0;&#10;  -fx-background-color: white; " wrapText="true" />
+    <AnchorPane prefHeight="42.0" prefWidth="445.0" style="-fx-background-color: #00a3ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <Button fx:id="closeButton" layoutX="355.0" layoutY="9.0" mnemonicParsing="false" onAction="#close" prefHeight="22.0" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Na super..." textFill="#00a3ff">
+          <stylesheets>
+            <URL value="@../../res/styles.css" />
+          </stylesheets>
+        </Button>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

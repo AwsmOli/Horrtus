@@ -1,0 +1,42 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Horrtus">
+    <output-path>$PROJECT_DIR$/out/artifacts/Horrtus</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="graphical.Main" />
+        <option name="customManifestAttributes">
+          <list>
+            <JavaFxManifestAttribute>
+              <option name="name" value="" />
+              <option name="value" value="" />
+            </JavaFxManifestAttribute>
+            <JavaFxManifestAttribute>
+              <option name="name" value="" />
+              <option name="value" value="" />
+            </JavaFxManifestAttribute>
+          </list>
+        </option>
+        <option name="description" value="" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="Horrtus" />
+        <option name="vendor" value="isawsm.eu" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Horrtus.jar">
+        <element id="module-output" name="Horrtus" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/lib/itextpdf-5.5.0.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/itext-pdfa-5.5.0.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/itext-xtra-5.5.0.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/sqlite-jdbc-3.7.2.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/itextpdf-5.5.0-javadoc.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/itextpdf-5.5.0-sources.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/itext-pdfa-5.5.0-javadoc.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/itext-pdfa-5.5.0-sources.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/itext-xtra-5.5.0-javadoc.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/itext-xtra-5.5.0-sources.jar" />
+    </root>
+  </artifact>
+</component>

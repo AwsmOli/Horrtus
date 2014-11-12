@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane onKeyReleased="#processKeyboard" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphical.creation.ProjectCreation.ProjectCreationController">
+  <children>
+    <AnchorPane layoutX="0.0" layoutY="308.0" prefHeight="42.0" prefWidth="450.0" style="-fx-background-color: #00a3ff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <Button fx:id="bSave" layoutX="363.0" layoutY="11.0" mnemonicParsing="false" onAction="#save" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Speichern">
+          <textFill>
+            <Color blue="1.000" green="0.640" red="0.000" fx:id="x1" />
+          </textFill>
+        </Button>
+        <Button fx:id="bCancel" layoutX="275.0" layoutY="11.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: white;&#10;-fx-background-radius: 1;" text="Abbrechen" textFill="$x1" />
+        <Label fx:id="lError" layoutX="14.0" layoutY="16.0" prefWidth="251.0" text="" textFill="WHITE" />
+      </children>
+    </AnchorPane>
+    <Label fx:id="headline" layoutX="14.0" layoutY="14.0" text="Neues Projekt:" textFill="#00a3ff">
+      <font>
+        <Font name="Calibri" size="42.0" />
+      </font>
+    </Label>
+    <TextArea fx:id="taDescription" layoutX="14.0" layoutY="108.0" prefHeight="190.0" prefWidth="422.0" text="" wrapText="true" />
+    <Label layoutX="14.0" layoutY="92.0" text="Beschreibung:" />
+    <Label layoutX="14.0" layoutY="66.0" text="Name:" />
+    <TextField fx:id="tfName" layoutX="49.0" layoutY="63.0" prefWidth="387.0" />
+  </children>
+</AnchorPane>
